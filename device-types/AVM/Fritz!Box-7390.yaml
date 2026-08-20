@@ -1,0 +1,51 @@
+manufacturer: AVM
+model: Fritz!Box 7390
+slug: fritzbox-7390
+part_number: '20002448'
+u_height: 0
+is_full_depth: false
+comments: >-
+  VDSL/ADSL router with dual-band WLAN N, DECT base station, and ISDN S0 bus.
+  Four Gigabit Ethernet ports, two USB 2.0 Type-A host ports, two analogue a/b
+  ports, one ISDN S0 port, and one DSL/TEL port.
+
+interfaces:
+  - name: DSL/TEL
+    type: other
+  - name: FON 1
+    type: other
+  - name: FON 2
+    type: other
+  - name: FON S0
+    type: other
+  - name: LAN 1
+    type: 1000base-t
+  - name: LAN 2
+    type: 1000base-t
+  - name: LAN 3
+    type: 1000base-t
+  - name: LAN 4
+    type: 1000base-t
+
+power-ports:
+  - name: Power
+    type: dc-terminal
+    maximum_draw: 11
+
+rear-ports:
+  - name: DSL/TEL
+    type: other
+  - name: FON 1
+    type: other
+  - name: FON 2
+    type: other
+  - name: FON S0
+    type: other
+  - name: LAN 1
+    type: 8p8c
+  - name: LAN 2
+    type: 8p8c
+  - name: LAN 3
+    type: 8p8c
+  - name: LAN 4
+    type: 8p8c
