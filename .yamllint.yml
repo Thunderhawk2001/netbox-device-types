@@ -1,0 +1,35 @@
+---
+# yamllint configuration for NetBox Device-Type-Templates
+# Based on: https://github.com/netbox-community/devicetype-library
+
+extends: default
+
+rules:
+  # NetBox-Community-Standards (relaxed für manuelle Templates)
+  line-length:
+    max: 200
+    level: warning
+  truthy:
+    allowed-values: ['true', 'false', 'yes', 'no']
+    level: warning
+  comments:
+    min-spaces-from-content: 1
+  comments-indentation: disable
+  document-start: disable
+  empty-lines:
+    max: 2
+  indentation:
+    spaces: 2
+    indent-sequences: consistent
+  hyphens:
+    max-spaces-after: 1
+  braces:
+    max-spaces-inside: 1
+  brackets:
+    max-spaces-inside: 1
+
+  # Diese Regeln sind für NetBox-Templates relevant
+  key-duplicates: enable
+  quoted-strings: disable  # NetBox erlaubt unquoted strings
+  trailing-spaces: enable
+  new-line-at-end-of-file: enable

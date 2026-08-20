@@ -1,0 +1,44 @@
+name: Validate YAML
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install yamllint yamlfmt
+
+      - name: Run yamllint
+        run: |
+          echo "=== Running yamllint ==="
+          yamllint -d relaxed device-types/
+
+      - name: Run yamlfmt (dry-run)
+        run: |
+          echo "=== Checking YAML formatting ==="
+          yamlfmt -dry -formatter=yaml device-types/
+
+      - name: Summary
+        run: |
+          echo "✅ Validation complete!"
+          echo "All YAML files in device-types/ are valid."
