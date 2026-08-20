@@ -9,36 +9,27 @@ on:
     branches:
       - main
       - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
+    name: Validate NetBox YAML templates
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: '3.13'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install yamllint yamlfmt
+      - name: Install yamllint
+        run: python -m pip install --disable-pip-version-check yamllint
 
-      - name: Run yamllint
-        run: |
-          echo "=== Running yamllint ==="
-          yamllint -d relaxed device-types/
-
-      - name: Run yamlfmt (dry-run)
-        run: |
-          echo "=== Checking YAML formatting ==="
-          yamlfmt -dry -formatter=yaml device-types/
-
-      - name: Summary
-        run: |
-          echo "✅ Validation complete!"
-          echo "All YAML files in device-types/ are valid."
+      - name: Validate YAML files
+        run: yamllint -c .yamllint.yml device-types/
