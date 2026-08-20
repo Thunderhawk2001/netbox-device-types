@@ -1,0 +1,111 @@
+# AVM Fritz!Box 7390 - NetBox Device Type Template
+# Quelle: AVM Produktdatenblatt & Hardware-Dokumentation
+# Part Number: 20002448
+# https://assets.avm.de/files/docs/fritzbox/fritzbox-7390/
+
+manufacturer: AVM
+model: Fritz!Box 7390
+slug: fritzbox-7390
+part_number: '20002448'
+u_height: 0
+is_full_depth: false
+subdevice_role: ''
+airflow: ''
+# Dual-Band WLAN N (2,4 GHz bis 150 MBit/s, 5 GHz bis 300 MBit/s)
+# DECT-Basisstation für bis zu 6 Schnurloshandsets
+# VDSL/ADSL2+ Modem integriert
+comments: |
+  VDSL/ADSL Router mit integriertem WLAN N (Dual-Band), DECT-Basisstation und ISDN-S0-Bus.
+  4×¹ Gigabit-LAN (10/100/1000 Base-T), 2×¹ USB 2.0 Type-A Host,
+  2×¹ analoge a/b-Ports (FON 1/2, RJ-11/TAE), 1×¹ ISDN S0-Bus (FON S0, RJ-45),
+  1×¹ DSL/TEL-Port (VDSL/ADSL + analog/ISDN-Festnetz, RJ-45).
+  Abmessungen: ca. 230 × 160 × 40 mm (B × T × H).
+  Max. Stromverbrauch: ca. 11 W.
+
+interfaces:
+  - name: DSL/TEL
+    label: DSL/TEL (VDSL/ADSL + analog/ISDN)
+    type: other
+    mgmt_only: false
+  - name: FON 1
+    label: FON 1 (analog a/b)
+    type: other
+    mgmt_only: false
+  - name: FON 2
+    label: FON 2 (analog a/b)
+    type: other
+    mgmt_only: false
+  - name: FON S0
+    label: FON S0 (ISDN S0-Bus)
+    type: other
+    mgmt_only: false
+  - name: LAN 1
+    label: LAN 1
+    type: 1000base-t
+    mgmt_only: false
+  - name: LAN 2
+    label: LAN 2
+    type: 1000base-t
+    mgmt_only: false
+  - name: LAN 3
+    label: LAN 3
+    type: 1000base-t
+    mgmt_only: false
+  - name: LAN 4
+    label: LAN 4
+    type: 1000base-t
+    mgmt_only: false
+
+console-ports: []
+
+console-server-ports: []
+
+power-ports:
+  - name: Power
+    label: DC Power
+    type: dc-terminal
+    maximum_draw: 11
+
+power-outlets: []
+
+power-feeds: []
+
+rear-ports:
+  - name: DSL/TEL
+    label: DSL/TEL (VDSL/ADSL)
+    type: other
+    positions: 1
+  - name: FON 1
+    label: FON 1 (analog a/b)
+    type: other
+    positions: 1
+  - name: FON 2
+    label: FON 2 (analog a/b)
+    type: other
+    positions: 1
+  - name: FON S0
+    label: FON S0 (ISDN S0)
+    type: other
+    positions: 1
+  - name: LAN 1
+    label: LAN 1
+    type: 8p8c
+    positions: 1
+  - name: LAN 2
+    label: LAN 2
+    type: 8p8c
+    positions: 1
+  - name: LAN 3
+    label: LAN 3
+    type: 8p8c
+    positions: 1
+  - name: LAN 4
+    label: LAN 4
+    type: 8p8c
+    positions: 1
+
+front-ports: []
+
+device-bays: []
+
+module-bays: []
