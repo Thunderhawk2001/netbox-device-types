@@ -1,14 +1,14 @@
 ---
 # HP E8212 zl Switch Chassis (J9091A)
 # NetBox Device-Type Template
-# 
+#
 # Specs verified from official HP ProCurve documentation:
 # - HP ProCurve Series 8212zl Installation Guide (5991-8545, Aug 2007)
 # - HP ProCurve 8212zl Datasheet
 # - HPE 8200 zl Switch Series QuickSpecs (c04111638)
 #
 # Chassis-only (J9091A) - ships with fan tray pre-installed
-# Management Module (J9092A), Fabric Modules (J9093A), and 
+# Management Module (J9092A), Fabric Modules (J9093A), and
 # System Support Module (J9095A) ordered separately
 #
 # IMPORTANT: This chassis has NO built-in ports!
@@ -27,26 +27,26 @@ airflow: front-to-rear
 # airflow: front-to-rear - typical for HP/Aruba chassis switches
 comments: |
   HP ProCurve E8212 zl Switch Chassis (J9091A)
-  
+
   12-slot modular Layer 3 switch chassis from HP ProCurve 8200zl series.
-  
+
   IMPORTANT: This is a chassis-only SKU. It has NO built-in ports!
-  All interfaces, console ports, and power ports are provided by 
+  All interfaces, console ports, and power ports are provided by
   separately ordered modules and power supplies.
-  
+
   Physical Specifications (verified from official HP datasheet):
   - Height: 39.62 cm (15.6 in) = 9U
   - Width: 44.45 cm (17.5 in)
   - Depth: 47.5 cm (18.7 in)
   - Weight: 22.88 kg (50.45 lbs)
-  
+
   Chassis Configuration:
   - 12 open module slots (A-L) for zl modules
   - 4 power supply slots (requires minimum 2 PSUs)
   - 2 fabric module slots (J9093A)
   - 1-2 management module slots (J9092A)
   - 1 system support module slot (J9095A)
-  
+
   Supported zl Modules (examples):
   - J8702A: 24-port 10/100/1000-T zl PoE Module
   - J8705A: 20-port Gig-T + 4-port mini-GBIC/SFP zl PoE Module
@@ -54,21 +54,21 @@ comments: |
   - J8707A: 4-port 10Gig-X2 zl Module
   - J8708A: 4-port 10Gig-CX4 zl Module
   - J9051A: Wireless Edge Services zl Module
-  
+
   Power Supplies (ordered separately):
   - J8712A: 875W Power Supply (100-127/200-240V)
   - J8713A: 1500W Power Supply (200-240V only)
   - J9306A: 1500W PoE+ Power Supply
-  
+
   Note: This is the chassis-only SKU (J9091A).
   Base system (J8715A/B) includes pre-installed modules.
-  
+
   Performance:
   - Routing/Switching capacity: 576 Gbps
   - Switch fabric speed: 692 Gbps
   - Throughput: 428 Mpps
   - Forwarding table: 64,000 addresses
-  
+
   Console: Provided by Management Module (J9092A) - RS-232C via RJ-45
   Management: Web, CLI (VT-100), SNMP, ProCurve Manager
   VLANs: Up to 2048 IEEE 802.1Q VLANs
@@ -89,13 +89,13 @@ module-bays:
     position: front
     # MM2 is the redundant/standby management module slot
     # Console port (RJ-45 RS-232C) is on J9092A module
-  
+
   # System Support Module bay (J9095A)
   - name: SSM
     label: System Support Module
     position: front
     # SSM provides system monitoring and reset functionality
-  
+
   # Fabric Module bays (J9093A)
   - name: FM1
     label: Fabric Module 1
@@ -105,7 +105,7 @@ module-bays:
     label: Fabric Module 2
     position: front
     # FM2 is the redundant fabric module
-  
+
   # 12 universal module slots (A-L)
   # These accept any HP ProCurve zl module
   - name: A
