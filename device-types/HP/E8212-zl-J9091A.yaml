@@ -16,6 +16,7 @@
 #
 manufacturer: HP
 model: E8212 zl (J9091A)
+slug: hp-e8212-zl-j9091a
 part_number: J9091A
 u_height: 9
 # u_height source: HP Official Datasheet - 39.62 cm / 15.6 in = 9U
