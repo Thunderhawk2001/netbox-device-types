@@ -2,65 +2,21 @@
 # HP ProCurve 8200 zl Management Module (J9092A)
 # NetBox Device-Type Template
 #
-# Specs verified from official HP ProCurve documentation:
-# - HP ProCurve Switch zl Modules Installation Guide
-# - HP J9092A Product Specifications (Newegg, ServerBlink)
-# - HP ProCurve 8200zl Switch Series documentation
-#
 # For use with HP E8212 zl chassis (J9091A)
 # Provides out-of-band management access via RJ-45 console port
-#
 manufacturer: HP
 model: 8200 zl Management Module (J9092A)
+slug: hp-8200-zl-management-module-j9092a
 part_number: J9092A
-# Physical dimensions from HP specs:
-# Height: 1.4 in (35.56 mm)
-# Width: 8.1 in (205.74 mm)
-# Depth: 10.1 in (256.54 mm)
-# Weight: 1.19 lb (0.54 kg)
-# Note: Module dimensions, not chassis dimensions - no u_height for modules
 is_full_depth: false
-# is_full_depth: false - module depth 10.1" fits within chassis
 comments: |
-  HP ProCurve 8200 zl Management Module (J9092A)
-  
-  Management module for HP ProCurve 8200zl series switches (E8212 zl chassis J9091A).
-  
-  Physical Specifications (verified from HP product specs):
-  - Height: 1.4 in (35.56 mm)
-  - Width: 8.1 in (205.74 mm)
-  - Depth: 10.1 in (256.54 mm)
-  - Weight: 1.19 lb (0.54 kg)
-  
-  Features:
-  - RJ-45 serial console port for out-of-band management
-  - Hot-swappable (if 2 modules installed, otherwise causes shutdown)
-  - Requires software release K.12.xx or greater on 8200zl series
-  
-  Installation Notes:
-  - Install in MM1 or MM2 slot of E8212 zl chassis
-  - Base system (J8715A) includes 1 module
-  - Order second module (J9092A) for redundancy
-  - Removing this module with switch powered on will cause shutdown
-    UNLESS two management modules are installed
-  
-  Console Port:
-  - Type: RJ-45 (RS-232C serial)
-  - Cable: HP 5188-6699 (RJ-45 to DB-9 female)
-  - Used for out-of-band management access
-  
-  Compatibility:
-  - HP ProCurve Switch 8212zl (J9091A chassis)
-  - HP ProCurve Switch 8206zl, 8212zl base systems
-  
-  Part Numbers:
-  - J9092A: 8200zl Management Module
-  - J9092A-69001: Refurbished option
+  HP ProCurve 8200 zl Management Module (J9092A).
+
+  Management module for HP ProCurve 8200zl series switches.
+  Install in MM1 or MM2 of an E8212 zl chassis (J9091A).
+
+  Provides an RJ-45 RS-232C serial console port for out-of-band management.
+  A second J9092A may be installed for management-module redundancy.
 console-ports:
   - name: Console
     type: rj-45
-    # RJ-45 serial console port for out-of-band management
-    # Cable: HP 5188-6699 (RJ-45 to DB-9 female)
-    # Per HP installation guide and product specifications
-# No power-ports - module receives power from chassis backplane
-# No interfaces - this is a management module, not a network interface module

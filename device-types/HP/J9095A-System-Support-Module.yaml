@@ -2,71 +2,18 @@
 # HP ProCurve 8200 zl System Support Module (J9095A)
 # NetBox Device-Type Template
 #
-# Specs verified from official HP ProCurve documentation:
-# - HP ProCurve Switch zl Modules Installation Guide (5991-8547, Aug 2007)
-# - HP ProCurve 8200zl Switch Series documentation
-# - HP J9095A Product Specifications (ServerBlink, Newegg)
-#
 # For use with HP E8212 zl chassis (J9091A)
 # Provides system monitoring and reset functionality
-#
-# CRITICAL: DO NOT remove this module while switch is powered on!
-# Removing J9095A with power applied will cause immediate switch shutdown.
-#
 manufacturer: HP
 model: 8200 zl System Support Module (J9095A)
+slug: hp-8200-zl-system-support-module-j9095a
 part_number: J9095A
-# Physical dimensions from HP specs:
-# Height: 1.4 in (35.56 mm)
-# Width: 8.1 in (205.74 mm)
-# Depth: 10.1 in (256.54 mm)
-# Note: Module dimensions, not chassis dimensions - no u_height for modules
 is_full_depth: false
-# is_full_depth: false - module depth 10.1" fits within chassis
 comments: |
-  HP ProCurve 8200 zl System Support Module (J9095A)
+  HP ProCurve 8200 zl System Support Module (J9095A).
 
-  System support module for HP ProCurve 8200zl series switches (E8212 zl chassis J9091A).
+  System support module for HP ProCurve 8200zl series switches.
+  Install in the SSM slot of an E8212 zl chassis (J9091A).
 
-  Physical Specifications (verified from HP product specs):
-  - Height: 1.4 in (35.56 mm)
-  - Width: 8.1 in (205.74 mm)
-  - Depth: 10.1 in (256.54 mm)
-  - Weight: ~1.2 lb (0.54 kg) [estimated, similar to J9092A]
-
-  Features:
-  - System monitoring and health status
-  - System reset functionality
-  - Hot-swap protection
-
-  CRITICAL WARNING:
-  - DO NOT remove this module while the switch is powered on!
-  - Removing J9095A with power applied will cause IMMEDIATE switch shutdown
-  - This is the ONLY module that cannot be hot-swapped on the 8200zl series
-  - Must power down entire chassis before removing/replacing this module
-
-  Installation Notes:
-  - Install in SSM slot of E8212 zl chassis
-  - Required component for 8200zl series operation
-  - Base system (J8715A) includes 1 module
-  - Requires software release K.12.xx or greater on 8200zl series
-
-  Function:
-  - Monitors system health and status
-  - Provides system reset capability
-  - Essential for chassis management and monitoring
-
-  Compatibility:
-  - HP ProCurve Switch 8212zl (J9091A chassis)
-  - HP ProCurve Switch 8206zl base systems
-
-  Part Numbers:
-  - J9095A: 8200zl System Support Module
-
-  Hot-Swap Precautions (from HP Installation Guide):
-  - Do not install/remove any modules while switch Self Test LED is lit
-  - Before removing or installing any modules, disconnect all network cables
-  - For J9095A: MUST power down chassis before removal
-# No console-ports - this module has no external ports
-# No power-ports - module receives power from chassis backplane
-# No interfaces - this is a system support module, not a network interface module
+  Do not remove this module while the chassis is powered on; removal causes
+  an immediate switch shutdown.
