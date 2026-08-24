@@ -2,6 +2,10 @@
 
 Dieses Repository enthält YAML-Device-Type-Templates für NetBox.
 
+> ⚠️ **WICHTIG: KI-UNTERSTÜTZTE TEMPLATES**
+>
+> Diese Templates wurden mit KI-Unterstützung erstellt. Prüfe vor einem produktiven Einsatz sämtliche Hardware-Spezifikationen, Ports, Steckertypen, Maße und Kompatibilitätsangaben anhand offizieller Herstellerdokumentation sowie in einer Testumgebung.
+
 ## Struktur
 
 ```
